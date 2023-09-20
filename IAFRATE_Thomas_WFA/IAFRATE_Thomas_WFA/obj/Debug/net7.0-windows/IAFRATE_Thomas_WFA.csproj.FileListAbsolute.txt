@@ -1,0 +1,17 @@
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\bin\Debug\net7.0-windows\IAFRATE_Thomas_WFA.exe
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\bin\Debug\net7.0-windows\IAFRATE_Thomas_WFA.deps.json
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\bin\Debug\net7.0-windows\IAFRATE_Thomas_WFA.runtimeconfig.json
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\bin\Debug\net7.0-windows\IAFRATE_Thomas_WFA.dll
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\bin\Debug\net7.0-windows\IAFRATE_Thomas_WFA.pdb
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\IAFRATE_Thomas_WFA.Form1.resources
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\IAFRATE_Thomas_WFA.csproj.GenerateResource.cache
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\IAFRATE_Thomas_WFA.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\IAFRATE_Thomas_WFA.AssemblyInfoInputs.cache
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\IAFRATE_Thomas_WFA.AssemblyInfo.cs
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\IAFRATE_Thomas_WFA.csproj.CoreCompileInputs.cache
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\IAFRATE_Thomas_WFA.dll
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\refint\IAFRATE_Thomas_WFA.dll
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\IAFRATE_Thomas_WFA.pdb
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\IAFRATE_Thomas_WFA.genruntimeconfig.cache
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\ref\IAFRATE_Thomas_WFA.dll
+D:\Users\thoma\OneDrive\Bureau\WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\IAFRATE_Thomas_WFA.Properties.Resources.resources
