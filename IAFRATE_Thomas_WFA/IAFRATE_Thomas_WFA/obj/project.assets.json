@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\thoma\\OneDrive\\Bureau\\WFA\\IAFRATE_Thomas_WFA\\IAFRATE_Thomas_WFA\\IAFRATE_Thomas_WFA.csproj",
+      "projectUniqueName": "D:\\Users\\thoma\\OneDrive\\Bureau\\hangmanweb\\Iafrate_Thomas_WFA\\IAFRATE_Thomas_WFA\\IAFRATE_Thomas_WFA\\IAFRATE_Thomas_WFA.csproj",
       "projectName": "IAFRATE_Thomas_WFA",
-      "projectPath": "D:\\Users\\thoma\\OneDrive\\Bureau\\WFA\\IAFRATE_Thomas_WFA\\IAFRATE_Thomas_WFA\\IAFRATE_Thomas_WFA.csproj",
+      "projectPath": "D:\\Users\\thoma\\OneDrive\\Bureau\\hangmanweb\\Iafrate_Thomas_WFA\\IAFRATE_Thomas_WFA\\IAFRATE_Thomas_WFA\\IAFRATE_Thomas_WFA.csproj",
       "packagesPath": "C:\\Users\\thoma\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\thoma\\OneDrive\\Bureau\\WFA\\IAFRATE_Thomas_WFA\\IAFRATE_Thomas_WFA\\obj\\",
+      "outputPath": "D:\\Users\\thoma\\OneDrive\\Bureau\\hangmanweb\\Iafrate_Thomas_WFA\\IAFRATE_Thomas_WFA\\IAFRATE_Thomas_WFA\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\thoma\\AppData\\Roaming\\NuGet\\NuGet.Config",
