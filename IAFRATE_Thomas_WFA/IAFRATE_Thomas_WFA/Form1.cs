@@ -7,7 +7,8 @@ namespace IAFRATE_Thomas_WFA
         int jumpSpeed = 15;
         int jumpspeed = 10;
         int force = 5;
-        int gravity = 2;
+        int gravity = 18;
+        bool isOnGround = false;
         int score = 0;
         int playerSpeed = 15;
         int initialJumpForce = -2;
@@ -38,20 +39,44 @@ namespace IAFRATE_Thomas_WFA
         private void GameTimerEvent(object sender, EventArgs e)
         {
             ScoreTxt.Text = "Score :" + score;
-            Me.Top += jumpspeed;
 
 
             if (jumping)
             {
-                jumpspeed += gravity;
-                Me.Top += jumpspeed;
+                jumpspeed = -jumpSpeed; 
                 force--;
                 if (force <= 0)
-                    jumping = false;
+                {
+                    jumping = false; 
+                }
             }
             else
             {
-                Me.Top += jumpspeed;
+                jumpspeed = gravity;
+            }
+
+            Me.Top += jumpspeed;
+
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && (string)x.Tag == "platform")
+                {
+                    if (Me.Bounds.IntersectsWith(x.Bounds) && !jumping)
+                    {
+                        isOnGround = true; 
+                        force = 8;
+                        Me.Top = x.Top - Me.Height - 10;
+                        jumpspeed = 0;
+                    }
+                    x.BringToFront();
+                }
+            }
+
+
+            if (Me.Top + Me.Height > this.ClientSize.Height)
+            {
+                Me.Top = this.ClientSize.Height - Me.Height; 
+                jumping = false; 
             }
 
             if (goLeft == true && Me.Left > 120)
@@ -63,14 +88,21 @@ namespace IAFRATE_Thomas_WFA
                 Me.Left += playerSpeed;
             }
 
+            if (Me.Top + Me.Height > this.ClientSize.Height)
+            {
+                Me.Top = this.ClientSize.Height - Me.Height - 10;
+                isOnGround = true; 
+            }
+
+
             if (jumping == true)
             {
-                jumpspeed = -70;
+                jumpspeed = -20;
                 force -= 1;
             }
             else
             {
-                jumpspeed = 70;
+                jumpspeed = 20;
             }
 
             if (jumping == true && force < 0)
@@ -78,6 +110,7 @@ namespace IAFRATE_Thomas_WFA
                 jumping = false;
             }
 
+            // animation
 
             if (goLeft)
             {
@@ -116,17 +149,19 @@ namespace IAFRATE_Thomas_WFA
             {
                 goRight = true;
             }
-            if (e.KeyCode == Keys.Space && jumping == false)
+            if (e.KeyCode == Keys.Space && !jumping && Me.Top + Me.Height >= this.ClientSize.Height)
             {
                 jumping = true;
+                force = 5;
             }
-            if (e.KeyCode == Keys.Space && !jumping)
+            if (e.KeyCode == Keys.Space && isOnGround) 
             {
                 jumping = true;
-                jumpspeed = jumpSpeed; // fixe la vitesse du saut à une valeur constante
+                isOnGround = false; 
+                force = 5;
             }
-
         }
+
 
         private void gamekeyisup(object sender, KeyEventArgs e)
         {
@@ -138,11 +173,6 @@ namespace IAFRATE_Thomas_WFA
             {
                 goRight = false;
             }
-            if (jumping == true)
-            {
-                jumping = false;
-            }
-
         }
 
 
@@ -161,19 +191,6 @@ namespace IAFRATE_Thomas_WFA
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Plateform4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Me_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

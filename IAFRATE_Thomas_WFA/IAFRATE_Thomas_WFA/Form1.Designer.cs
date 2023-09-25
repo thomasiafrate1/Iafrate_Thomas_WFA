@@ -84,7 +84,6 @@
             Plateform4.TabIndex = 7;
             Plateform4.TabStop = false;
             Plateform4.Tag = "platform";
-            Plateform4.Click += Plateform4_Click;
             // 
             // Door
             // 
@@ -124,7 +123,6 @@
             Me.SizeMode = PictureBoxSizeMode.Zoom;
             Me.TabIndex = 11;
             Me.TabStop = false;
-            Me.Click += Me_Click;
             // 
             // ground
             // 
