@@ -1,39 +1,27 @@
+using System;
+
 namespace IAFRATE_Thomas_WFA
 {
     public partial class Form1 : Form
-    {   
+    {
 
         bool goLeft, goRight, jumping;
-        int jumpSpeed = 15;
-        int jumpspeed = 10;
-        int force = 5;
-        int gravity = 18;
+        int jumpSpeed = 30;
+        int jumpspeed = 25;
+        int force = 10;
+        int gravity = 25;
         bool isOnGround = false;
         int score = 0;
         int playerSpeed = 15;
         int initialJumpForce = -2;
 
 
-        List<Image> standRightImages = new List<Image>();
-        List<Image> standLeftImages = new List<Image>();
-        List<Image> walkRightImages = new List<Image>();
-        List<Image> walkLeftImages = new List<Image>();
-        int animationIndex = 0;
+
 
         public Form1()
         {
             InitializeComponent();
 
-            standRightImages.Add(Properties.Resources.character);
-            standLeftImages.Add(Properties.Resources.characterToLeft);
-
-            walkRightImages.Add(Properties.Resources.characterToRight1);
-            walkRightImages.Add(Properties.Resources.characterToRight2);
-
-            walkLeftImages.Add(Properties.Resources.characterToLeft1);
-            walkLeftImages.Add(Properties.Resources.characterToLeft2);
-
-            Me.Image = standRightImages[0];
         }
 
         private void GameTimerEvent(object sender, EventArgs e)
@@ -43,11 +31,11 @@ namespace IAFRATE_Thomas_WFA
 
             if (jumping)
             {
-                jumpspeed = -jumpSpeed; 
+                jumpspeed = -jumpSpeed;
                 force--;
                 if (force <= 0)
                 {
-                    jumping = false; 
+                    jumping = false;
                 }
             }
             else
@@ -63,9 +51,9 @@ namespace IAFRATE_Thomas_WFA
                 {
                     if (Me.Bounds.IntersectsWith(x.Bounds) && !jumping)
                     {
-                        isOnGround = true; 
+                        isOnGround = true;
                         force = 8;
-                        Me.Top = x.Top - Me.Height - 10;
+                        Me.Top = x.Top - Me.Height + 10;
                         jumpspeed = 0;
                     }
                     x.BringToFront();
@@ -75,15 +63,15 @@ namespace IAFRATE_Thomas_WFA
 
             if (Me.Top + Me.Height > this.ClientSize.Height)
             {
-                Me.Top = this.ClientSize.Height - Me.Height; 
-                jumping = false; 
+                Me.Top = this.ClientSize.Height - Me.Height;
+                jumping = false;
             }
 
-            if (goLeft == true && Me.Left > 120)
+            if (goLeft == true && Me.Left > 20)
             {
                 Me.Left -= playerSpeed;
             }
-            if (goRight == true && Me.Left + (Me.Width + 60) < this.ClientSize.Width)
+            if (goRight == true && Me.Left + (Me.Width + 20) < this.ClientSize.Width)
             {
                 Me.Left += playerSpeed;
             }
@@ -91,7 +79,7 @@ namespace IAFRATE_Thomas_WFA
             if (Me.Top + Me.Height > this.ClientSize.Height)
             {
                 Me.Top = this.ClientSize.Height - Me.Height - 10;
-                isOnGround = true; 
+                isOnGround = true;
             }
 
 
@@ -112,31 +100,12 @@ namespace IAFRATE_Thomas_WFA
 
             // animation
 
-            if (goLeft)
-            {
-                Me.Image = walkLeftImages[animationIndex];
-                AnimateCharacter();
-            }
-            else if (goRight)
-            {
-                Me.Image = walkRightImages[animationIndex];
-                AnimateCharacter();
-            }
-            else
-            {
-
-                Me.Image = (Me.Image == walkLeftImages[0] || Me.Image == walkLeftImages[1])
-                        ? standLeftImages[0] : standRightImages[0];
-            }
+            this.DoubleBuffered = true;
         }
 
         private void AnimateCharacter()
         {
-            animationIndex++;
-            if (animationIndex >= walkRightImages.Count)
-            {
-                animationIndex = 0;
-            }
+
         }
 
         private void gamekeyisdown(object sender, KeyEventArgs e)
@@ -154,12 +123,24 @@ namespace IAFRATE_Thomas_WFA
                 jumping = true;
                 force = 5;
             }
-            if (e.KeyCode == Keys.Space && isOnGround) 
+            if (e.KeyCode == Keys.Space && isOnGround)
             {
                 jumping = true;
-                isOnGround = false; 
+                isOnGround = false;
                 force = 5;
             }
+
+            if (e.KeyCode == Keys.Left)
+            {
+                goLeft = true;
+                Me.Image = Properties.Resources.characterToLeft1;
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                goRight = true;
+                Me.Image = Properties.Resources.characterToRight1;
+            }
+
         }
 
 
@@ -172,6 +153,18 @@ namespace IAFRATE_Thomas_WFA
             if (e.KeyCode == Keys.Right)
             {
                 goRight = false;
+            }
+
+            if (e.KeyCode == Keys.Left)
+            {
+                goLeft = false;
+                Me.Image = Properties.Resources.character;
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                goRight = false;
+                Me.Image = Properties.Resources.character;
+
             }
         }
 
@@ -191,6 +184,8 @@ namespace IAFRATE_Thomas_WFA
 
         }
 
-       
+
+
+
     }
 }

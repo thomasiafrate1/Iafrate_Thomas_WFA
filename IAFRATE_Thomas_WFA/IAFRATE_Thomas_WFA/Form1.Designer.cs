@@ -55,7 +55,7 @@
             Plateform2.BackgroundImage = Properties.Resources.plateform;
             Plateform2.Location = new Point(187, 447);
             Plateform2.Name = "Plateform2";
-            Plateform2.Size = new Size(242, 34);
+            Plateform2.Size = new Size(241, 33);
             Plateform2.SizeMode = PictureBoxSizeMode.StretchImage;
             Plateform2.TabIndex = 5;
             Plateform2.TabStop = false;
@@ -162,8 +162,7 @@
             // Form1
             // 
             BackColor = Color.White;
-            BackgroundImage = Properties.Resources.ultra_hd_wazf67lzyh5q7k32;
-            BackgroundImageLayout = ImageLayout.Stretch;
+            BackgroundImage = Properties.Resources.Brown;
             ClientSize = new Size(737, 543);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
@@ -174,6 +173,7 @@
             Controls.Add(Plateform2);
             Controls.Add(Plateform3);
             Controls.Add(ScoreTxt);
+            DoubleBuffered = true;
             Name = "Form1";
             FormClosed += formclosed;
             KeyDown += gamekeyisdown;

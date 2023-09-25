@@ -113,6 +113,16 @@ namespace IAFRATE_Thomas_WFA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Brown {
+            get {
+                object obj = ResourceManager.GetObject("Brown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap characte {
             get {
                 object obj = ResourceManager.GetObject("characte", resourceCulture);
