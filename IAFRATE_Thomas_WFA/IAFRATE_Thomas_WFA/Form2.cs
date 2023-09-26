@@ -1,8 +1,16 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace IAFRATE_Thomas_WFA
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
 
         bool goLeft, goRight, jumping;
@@ -18,36 +26,16 @@ namespace IAFRATE_Thomas_WFA
 
 
 
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
-
         }
 
 
 
-
-        private void GameTimerEvent(object sender, EventArgs e)
+        private void MainTimerEvent(object sender, EventArgs e)
         {
-
-            foreach (Control x in this.Controls)
-            {
-                if (x is PictureBox && (string)x.Tag == "door")
-                {
-                    if (Me.Bounds.IntersectsWith(x.Bounds))
-                    {
-                        GameTimer.Stop(); // Supposant que gameTimer est le nom de votre Timer
-                        Form2 form2 = new Form2();
-                        this.Hide();
-                        form2.Show();
-                    }
-                }
-            }
-
-
-
-
-            ScoreTxt.Text = "Score :" + score;
+            
 
 
             if (jumping)
@@ -124,12 +112,7 @@ namespace IAFRATE_Thomas_WFA
             this.DoubleBuffered = true;
         }
 
-        private void AnimateCharacter()
-        {
-
-        }
-
-        private void gamekeyisdown(object sender, KeyEventArgs e)
+        private void KeyIsDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
             {
@@ -161,11 +144,9 @@ namespace IAFRATE_Thomas_WFA
                 goRight = true;
                 Me.Image = Properties.Resources.characterToRight1;
             }
-
         }
 
-
-        private void gamekeyisup(object sender, KeyEventArgs e)
+        private void KeyIsUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
             {
@@ -188,25 +169,5 @@ namespace IAFRATE_Thomas_WFA
 
             }
         }
-
-
-        private void formclosed(object sender, FormClosedEventArgs e)
-        {
-
-        }
-
-        private void RestartGame()
-        {
-
-        }
-
-        private void MoveGameElements(string direction)
-        {
-
-        }
-
-
-
-
     }
 }
