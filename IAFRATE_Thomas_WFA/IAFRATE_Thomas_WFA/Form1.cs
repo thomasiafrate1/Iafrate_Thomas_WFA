@@ -15,12 +15,20 @@ namespace IAFRATE_Thomas_WFA
         int playerSpeed = 15;
         int initialJumpForce = -2;
 
-
+        int frameIndex = 0;
+            List<Image> fruitImages = new List<Image>
+            {
+                Properties.Resources.Cherries1,
+                Properties.Resources.Cherries2,
+                Properties.Resources.Cherries3,
+                Properties.Resources.Cherries4
+            };
 
 
         public Form1()
         {
             InitializeComponent();
+            
 
         }
 
@@ -29,6 +37,19 @@ namespace IAFRATE_Thomas_WFA
 
         private void GameTimerEvent(object sender, EventArgs e)
         {
+
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && (string)x.Tag == "fruit")
+                {
+                    PictureBox fruit = (PictureBox)x;
+                    fruit.BackgroundImage = fruitImages[frameIndex];
+                }
+            }
+
+            frameIndex = (frameIndex + 1) % 4; // Cela incrémente frameIndex à chaque tick, mais le garde entre 0 et 3
+
+
 
             foreach (Control x in this.Controls)
             {
@@ -43,7 +64,6 @@ namespace IAFRATE_Thomas_WFA
                     }
                 }
             }
-
 
 
 

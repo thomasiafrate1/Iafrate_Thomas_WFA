@@ -24,18 +24,120 @@ namespace IAFRATE_Thomas_WFA
         int initialJumpForce = -2;
 
 
+        int platMoveSpeed = 3; // Vitesse de déplacement de la plateforme.
+        int platMoveDistance = 250; // Distance maximale de déplacement.
+        int platMoveDirection = 1; // Direction du déplacement. 1 pour monter, -1 pour descendre.
+        int platInitialTop; // Position initiale de la plateforme.
+
+
+        int enemySpeed = 5; // Vous pouvez ajuster cette valeur pour que l'ennemi se déplace plus rapidement ou plus lentement
+        bool movingRight = true; // Une variable pour déterminer si l'ennemi se déplace vers la droite ou vers la gauche
+
+        int playerStartPositionX;
+        int playerStartPositionY;
+
+        int frameIndex = 0;
+        List<Image> fruitImages = new List<Image>
+            {
+                Properties.Resources.Pineapple1,
+                Properties.Resources.Pineapple2,
+                Properties.Resources.Pineapple3,
+                Properties.Resources.Pineapple4
+            };
 
 
         public Form2()
         {
             InitializeComponent();
+            // Trouver la plateforme avec le tag "platmove" et définir sa position initiale.
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && (string)x.Tag == "platmove")
+                {
+                    platInitialTop = x.Top;
+                }
+            }
+
+            playerStartPositionX = Me.Left;
+            playerStartPositionY = Me.Top;
         }
 
 
 
         private void MainTimerEvent(object sender, EventArgs e)
         {
-            
+
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox)
+                {
+                    // Vérification de la collision avec l'ennemi
+                    if ((string)x.Tag == "enemie1" && Me.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        // Remet le personnage à sa position de départ
+                        Me.Left = playerStartPositionX;
+                        Me.Top = playerStartPositionY;
+                    }
+
+                    // ...
+                }
+            }
+
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox)
+                {
+                    if ((string)x.Tag == "enemie1")
+                    {
+                        PictureBox enemy = (PictureBox)x;
+
+                        // Déplacez l'ennemi horizontalement
+                        if (movingRight)
+                        {
+                            enemy.Left += enemySpeed;
+                            if (enemy.Left + enemy.Width > this.ClientSize.Width - 200) // vérifie si l'ennemi a atteint le bord droit
+                                movingRight = false; // changez la direction
+                        }
+                        else
+                        {
+                            enemy.Left -= enemySpeed;
+                            if (enemy.Left < 0 + 330) // vérifie si l'ennemi a atteint le bord gauche
+                                movingRight = true; // changez la direction
+                        }
+                    }
+
+                    // logique pour les autres PictureBox...
+
+                }
+            }
+
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && (string)x.Tag == "platmove")
+                {
+                    x.Top += platMoveSpeed * platMoveDirection; // Déplacer la plateforme.
+
+                    // Si la plateforme a atteint la limite de sa distance de déplacement, changer la direction.
+                    if (x.Top - platInitialTop >= platMoveDistance || x.Top - platInitialTop <= 0)
+                    {
+                        platMoveDirection *= -1;
+                    }
+                }
+            }
+
+
+
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && (string)x.Tag == "fruit")
+                {
+                    PictureBox fruit = (PictureBox)x;
+                    fruit.BackgroundImage = fruitImages[frameIndex];
+                }
+            }
+
+            frameIndex = (frameIndex + 1) % 4; // Cela incrémente frameIndex à chaque tick, mais le garde entre 0 et 3
+
 
 
             if (jumping)
@@ -56,16 +158,25 @@ namespace IAFRATE_Thomas_WFA
 
             foreach (Control x in this.Controls)
             {
-                if (x is PictureBox && (string)x.Tag == "platform")
+                if (x is PictureBox)
                 {
-                    if (Me.Bounds.IntersectsWith(x.Bounds) && !jumping)
+                    if ((string)x.Tag == "platform" || (string)x.Tag == "platmove")
                     {
-                        isOnGround = true;
-                        force = 8;
-                        Me.Top = x.Top - Me.Height + 10;
-                        jumpspeed = 0;
+                        if (Me.Bounds.IntersectsWith(x.Bounds) && !jumping)
+                        {
+                            isOnGround = true;
+                            force = 8;
+                            Me.Top = x.Top - Me.Height + 10;
+                            jumpspeed = 0;
+
+                            // Si la plateforme est mobile, déplacez le personnage avec la plateforme.
+                            if ((string)x.Tag == "platmove")
+                            {
+                                Me.Top += platMoveSpeed * platMoveDirection;
+                            }
+                        }
+                        x.BringToFront();
                     }
-                    x.BringToFront();
                 }
             }
 

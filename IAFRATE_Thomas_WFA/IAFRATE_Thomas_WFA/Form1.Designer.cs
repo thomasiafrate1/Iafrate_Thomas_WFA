@@ -240,6 +240,7 @@
             pictureBox7.Size = new Size(31, 55);
             pictureBox7.TabIndex = 19;
             pictureBox7.TabStop = false;
+            pictureBox7.Tag = "fruit";
             // 
             // pictureBox8
             // 
@@ -251,6 +252,7 @@
             pictureBox8.Size = new Size(31, 55);
             pictureBox8.TabIndex = 20;
             pictureBox8.TabStop = false;
+            pictureBox8.Tag = "fruit";
             // 
             // pictureBox12
             // 
@@ -262,6 +264,7 @@
             pictureBox12.Size = new Size(31, 55);
             pictureBox12.TabIndex = 24;
             pictureBox12.TabStop = false;
+            pictureBox12.Tag = "fruit";
             // 
             // pictureBox14
             // 
@@ -273,6 +276,7 @@
             pictureBox14.Size = new Size(31, 55);
             pictureBox14.TabIndex = 26;
             pictureBox14.TabStop = false;
+            pictureBox14.Tag = "fruit";
             // 
             // pictureBox9
             // 
@@ -284,6 +288,7 @@
             pictureBox9.Size = new Size(31, 55);
             pictureBox9.TabIndex = 30;
             pictureBox9.TabStop = false;
+            pictureBox9.Tag = "fruit";
             // 
             // pictureBox10
             // 
@@ -295,6 +300,7 @@
             pictureBox10.Size = new Size(31, 55);
             pictureBox10.TabIndex = 29;
             pictureBox10.TabStop = false;
+            pictureBox10.Tag = "fruit";
             // 
             // pictureBox11
             // 
@@ -306,6 +312,7 @@
             pictureBox11.Size = new Size(31, 55);
             pictureBox11.TabIndex = 28;
             pictureBox11.TabStop = false;
+            pictureBox11.Tag = "fruit";
             // 
             // Form1
             // 
