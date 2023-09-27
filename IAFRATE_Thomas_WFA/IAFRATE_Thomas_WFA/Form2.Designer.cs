@@ -46,6 +46,7 @@
             pictureBox16 = new PictureBox();
             pictureBox13 = new PictureBox();
             GameTimer = new System.Windows.Forms.Timer(components);
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -77,9 +78,9 @@
             // pictureBox2
             // 
             pictureBox2.BackgroundImage = Properties.Resources.plateform2;
-            pictureBox2.Location = new Point(149, 463);
+            pictureBox2.Location = new Point(149, 460);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(97, 17);
+            pictureBox2.Size = new Size(97, 31);
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             pictureBox2.Tag = "platform";
@@ -89,7 +90,7 @@
             pictureBox3.BackgroundImage = Properties.Resources.plateform2;
             pictureBox3.Location = new Point(263, 422);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(337, 17);
+            pictureBox3.Size = new Size(337, 35);
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
             pictureBox3.Tag = "platform";
@@ -111,7 +112,7 @@
             pictureBox5.BackgroundImage = Properties.Resources.plateform2;
             pictureBox5.Location = new Point(263, 198);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(338, 17);
+            pictureBox5.Size = new Size(338, 34);
             pictureBox5.TabIndex = 4;
             pictureBox5.TabStop = false;
             pictureBox5.Tag = "platform";
@@ -121,7 +122,7 @@
             pictureBox6.BackgroundImage = Properties.Resources.plateform2;
             pictureBox6.Location = new Point(0, 155);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(193, 17);
+            pictureBox6.Size = new Size(193, 37);
             pictureBox6.TabIndex = 5;
             pictureBox6.TabStop = false;
             pictureBox6.Tag = "platform";
@@ -253,28 +254,39 @@
             GameTimer.Tag = "";
             GameTimer.Tick += MainTimerEvent;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(0, -1);
+            label1.Name = "label1";
+            label1.Size = new Size(87, 32);
+            label1.TabIndex = 59;
+            label1.Text = "Score :";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Green;
             ClientSize = new Size(737, 543);
+            Controls.Add(label1);
+            Controls.Add(pictureBox4);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
-            Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(Me);
             Controls.Add(pictureBox7);
-            Controls.Add(pictureBox8);
-            Controls.Add(pictureBox9);
-            Controls.Add(pictureBox10);
-            Controls.Add(pictureBox13);
-            Controls.Add(pictureBox11);
-            Controls.Add(pictureBox12);
             Controls.Add(pictureBox16);
             Controls.Add(Door);
+            Controls.Add(pictureBox12);
+            Controls.Add(pictureBox11);
+            Controls.Add(pictureBox10);
+            Controls.Add(pictureBox9);
+            Controls.Add(pictureBox8);
+            Controls.Add(pictureBox13);
             Name = "Form2";
             Text = "Form2";
             KeyDown += KeyIsDown;
@@ -296,6 +308,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -318,5 +331,6 @@
         private PictureBox pictureBox16;
         private PictureBox pictureBox13;
         private System.Windows.Forms.Timer GameTimer;
+        private Label label1;
     }
 }

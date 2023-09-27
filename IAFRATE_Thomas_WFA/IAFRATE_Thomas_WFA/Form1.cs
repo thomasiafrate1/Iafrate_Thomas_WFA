@@ -16,7 +16,9 @@ namespace IAFRATE_Thomas_WFA
         int initialJumpForce = -2;
 
         int frameIndex = 0;
-            List<Image> fruitImages = new List<Image>
+
+        // liste des images de fruit pour faire l'animation
+        List<Image> fruitImages = new List<Image>
             {
                 Properties.Resources.Cherries1,
                 Properties.Resources.Cherries2,
@@ -28,16 +30,21 @@ namespace IAFRATE_Thomas_WFA
         public Form1()
         {
             InitializeComponent();
-            
+
 
         }
 
+        // sert à stocker le score (A FINIR)
+        public static class GameData
+        {
+            public static int Score = 0;
+        }
 
 
-
+        // méthode timer qui gère les collisions, les animations etc...
         private void GameTimerEvent(object sender, EventArgs e)
         {
-
+            // boucle pour mettre à jour les images de fruits
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "fruit")
@@ -47,17 +54,17 @@ namespace IAFRATE_Thomas_WFA
                 }
             }
 
-            frameIndex = (frameIndex + 1) % 4; // Cela incrémente frameIndex à chaque tick, mais le garde entre 0 et 3
+            frameIndex = (frameIndex + 1) % 4;
 
 
-
+            // boucle pour la collision entre le character et la porte
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "door")
                 {
                     if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
-                        GameTimer.Stop(); // Supposant que gameTimer est le nom de votre Timer
+                        GameTimer.Stop(); 
                         Form2 form2 = new Form2();
                         this.Hide();
                         form2.Show();
@@ -66,10 +73,29 @@ namespace IAFRATE_Thomas_WFA
             }
 
 
+            // boucle pour la collision entre le joueur et les fruit + mettre à jour le score (A FINIR)
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && (string)x.Tag == "fruit")
+                {
+                    if (Me.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        GameData.Score++;
+                        label1.Text = "Score : " + GameData.Score.ToString(); 
+                        x.Left = -100; 
+                    }
 
-            ScoreTxt.Text = "Score :" + score;
+                    else
+                    {
+                        PictureBox fruit = (PictureBox)x;
+                        fruit.BackgroundImage = fruitImages[frameIndex];
+                    }
+                }
+            }
 
 
+
+            // gérer le saut du personnage
             if (jumping)
             {
                 jumpspeed = -jumpSpeed;
@@ -86,22 +112,35 @@ namespace IAFRATE_Thomas_WFA
 
             Me.Top += jumpspeed;
 
+
+
+            // boucle pour les collisions entre le joueur et les plateformes
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "platform")
                 {
-                    if (Me.Bounds.IntersectsWith(x.Bounds) && !jumping)
+                    if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
-                        isOnGround = true;
-                        force = 8;
-                        Me.Top = x.Top - Me.Height + 10;
-                        jumpspeed = 0;
+                        
+                        if (Me.Bottom < x.Bottom)
+                        {
+                            isOnGround = true;
+                            force = 8;
+                            Me.Top = x.Top - Me.Height;
+                            jumpspeed = 0;
+                        }
+                        
+                        else if (jumping && Me.Top < x.Bottom)
+                        {
+                            jumping = false;
+                        }
                     }
-                    x.BringToFront();
                 }
             }
 
 
+
+            // gérer les mouvements du personnage par rapport a la fenêtre
             if (Me.Top + Me.Height > this.ClientSize.Height)
             {
                 Me.Top = this.ClientSize.Height - Me.Height;
@@ -139,18 +178,24 @@ namespace IAFRATE_Thomas_WFA
                 jumping = false;
             }
 
-            // animation
+            // animation blanc
 
             this.DoubleBuffered = true;
         }
 
+
+        //penser a supprimer ca sert a rien
         private void AnimateCharacter()
         {
 
         }
 
+
+        // gérer lorsque les touches sont enfoncées
         private void gamekeyisdown(object sender, KeyEventArgs e)
         {
+
+            //déplacer le personnage
             if (e.KeyCode == Keys.Left)
             {
                 goLeft = true;
@@ -171,6 +216,7 @@ namespace IAFRATE_Thomas_WFA
                 force = 5;
             }
 
+            // animation quand on bouge
             if (e.KeyCode == Keys.Left)
             {
                 goLeft = true;
@@ -184,9 +230,11 @@ namespace IAFRATE_Thomas_WFA
 
         }
 
-
+        // gérer lorsque les touches sont relâchées
         private void gamekeyisup(object sender, KeyEventArgs e)
         {
+
+            // arreter les mouvements
             if (e.KeyCode == Keys.Left)
             {
                 goLeft = false;
@@ -195,7 +243,9 @@ namespace IAFRATE_Thomas_WFA
             {
                 goRight = false;
             }
+            
 
+            // animation quand on bouge plus
             if (e.KeyCode == Keys.Left)
             {
                 goLeft = false;
@@ -209,17 +259,17 @@ namespace IAFRATE_Thomas_WFA
             }
         }
 
-
+        // enleeever ca sert a rien
         private void formclosed(object sender, FormClosedEventArgs e)
         {
 
         }
-
+        // enleeever ca sert a rien
         private void RestartGame()
         {
 
         }
-
+        // enleeever ca sert a rien
         private void MoveGameElements(string direction)
         {
 

@@ -493,6 +493,16 @@ namespace IAFRATE_Thomas_WFA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap spades {
+            get {
+                object obj = ResourceManager.GetObject("spades", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Spiked_Ball {
             get {
                 object obj = ResourceManager.GetObject("Spiked Ball", resourceCulture);
