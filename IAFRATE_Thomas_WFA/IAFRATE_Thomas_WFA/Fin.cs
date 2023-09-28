@@ -15,6 +15,7 @@ namespace IAFRATE_Thomas_WFA
         public Fin()
         {
             InitializeComponent();
+            Score.Text = "Score : " + GameData.Score.ToString();
         }
 
         private void Rejouer_Click(object sender, EventArgs e)

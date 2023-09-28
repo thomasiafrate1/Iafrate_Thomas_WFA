@@ -34,7 +34,7 @@
             Rejouer = new Button();
             Accueil = new Button();
             Quitter = new Button();
-            label4 = new Label();
+            Score = new Label();
             SuspendLayout();
             // 
             // label1
@@ -103,16 +103,16 @@
             Quitter.UseVisualStyleBackColor = true;
             Quitter.Click += Quitter_Click;
             // 
-            // label4
+            // Score
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(251, 281);
-            label4.Name = "label4";
-            label4.Size = new Size(125, 37);
-            label4.TabIndex = 6;
-            label4.Text = "Score :";
+            Score.AutoSize = true;
+            Score.BackColor = Color.Transparent;
+            Score.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            Score.Location = new Point(251, 281);
+            Score.Name = "Score";
+            Score.Size = new Size(125, 37);
+            Score.TabIndex = 6;
+            Score.Text = "Score :";
             // 
             // Fin
             // 
@@ -120,7 +120,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Pink;
             ClientSize = new Size(737, 543);
-            Controls.Add(label4);
+            Controls.Add(Score);
             Controls.Add(Quitter);
             Controls.Add(Accueil);
             Controls.Add(Rejouer);
@@ -141,6 +141,6 @@
         private Button Rejouer;
         private Button Accueil;
         private Button Quitter;
-        private Label label4;
+        private Label Score;
     }
 }

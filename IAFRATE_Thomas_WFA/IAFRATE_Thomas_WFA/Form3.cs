@@ -49,11 +49,7 @@ namespace IAFRATE_Thomas_WFA
 
         }
 
-        //stocker le score (A FINIR)
-        public static class GameData
-        {
-            public static int Score = 0;
-        }
+       
 
 
         //méthode principale qui gère les mouvements, collisions etc...

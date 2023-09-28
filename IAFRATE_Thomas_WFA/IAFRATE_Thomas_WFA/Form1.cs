@@ -11,7 +11,7 @@ namespace IAFRATE_Thomas_WFA
         int force = 10;
         int gravity = 25;
         bool isOnGround = false;
-        int score = 0;
+        
         int playerSpeed = 15;
         int initialJumpForce = -2;
 
@@ -35,10 +35,7 @@ namespace IAFRATE_Thomas_WFA
         }
 
         // sert à stocker le score (A FINIR)
-        public static class GameData
-        {
-            public static int Score = 0;
-        }
+        
 
 
         // méthode timer qui gère les collisions, les animations etc...
@@ -77,7 +74,7 @@ namespace IAFRATE_Thomas_WFA
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "fruit")
-                {
+                { 
                     if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
                         GameData.Score++;
