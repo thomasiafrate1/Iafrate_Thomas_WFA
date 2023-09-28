@@ -27,11 +27,11 @@ namespace IAFRATE_Thomas_WFA
         int platMoveSpeed = 3;
         int platMoveDistance = 250;
         int platMoveDirection = 1;
-        int platInitialTop; 
+        int platInitialTop;
 
 
-        int enemySpeed = 5; 
-        bool movingRight = true; 
+        int enemySpeed = 5;
+        bool movingRight = true;
 
         int playerStartPositionX;
         int playerStartPositionY;
@@ -66,8 +66,8 @@ namespace IAFRATE_Thomas_WFA
         }
 
 
-    
-        
+
+
 
 
         // méthode qui gère les mouvements, collisions ect...
@@ -81,9 +81,9 @@ namespace IAFRATE_Thomas_WFA
                 {
                     if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
-                        GameData.Score++; 
+                        GameData.Score++;
                         label1.Text = "Score : " + GameData.Score.ToString();
-                        x.Left = -100; 
+                        x.Left = -100;
                     }
 
                     else
@@ -101,7 +101,7 @@ namespace IAFRATE_Thomas_WFA
                 {
                     if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
-                        GameTimer.Stop(); 
+                        GameTimer.Stop();
                         Form3 form3 = new Form3();
                         this.Hide();
                         form3.Show();
@@ -115,15 +115,15 @@ namespace IAFRATE_Thomas_WFA
             {
                 if (x is PictureBox)
                 {
-                   
+
                     if ((string)x.Tag == "enemie1" && Me.Bounds.IntersectsWith(x.Bounds))
                     {
-                        
+
                         Me.Left = playerStartPositionX;
                         Me.Top = playerStartPositionY;
                     }
 
-                   
+
                 }
             }
 
@@ -137,22 +137,22 @@ namespace IAFRATE_Thomas_WFA
                     {
                         PictureBox enemy = (PictureBox)x;
 
-                        
+
                         if (movingRight)
                         {
                             enemy.Left += enemySpeed;
-                            if (enemy.Left + enemy.Width > this.ClientSize.Width - 200) 
-                                movingRight = false; 
+                            if (enemy.Left + enemy.Width > this.ClientSize.Width - 200)
+                                movingRight = false;
                         }
                         else
                         {
                             enemy.Left -= enemySpeed;
-                            if (enemy.Left < 0 + 330) 
-                                movingRight = true; 
+                            if (enemy.Left < 0 + 330)
+                                movingRight = true;
                         }
                     }
 
-                   
+
 
                 }
             }
@@ -163,9 +163,9 @@ namespace IAFRATE_Thomas_WFA
             {
                 if (x is PictureBox && (string)x.Tag == "platmove")
                 {
-                    x.Top += platMoveSpeed * platMoveDirection; 
+                    x.Top += platMoveSpeed * platMoveDirection;
 
-                    
+
                     if (x.Top - platInitialTop >= platMoveDistance || x.Top - platInitialTop <= 0)
                     {
                         platMoveDirection *= -1;
@@ -184,7 +184,7 @@ namespace IAFRATE_Thomas_WFA
                 }
             }
 
-            frameIndex = (frameIndex + 1) % 4; 
+            frameIndex = (frameIndex + 1) % 4;
 
 
             // gère le saut (gravité)
@@ -212,7 +212,7 @@ namespace IAFRATE_Thomas_WFA
                 {
                     if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
-                       
+
                         if (Me.Bottom < x.Bottom)
                         {
                             isOnGround = true;
@@ -220,7 +220,7 @@ namespace IAFRATE_Thomas_WFA
                             Me.Top = x.Top - Me.Height;
                             jumpspeed = 0;
                         }
-                        
+
                         else if (jumping && Me.Top < x.Bottom)
                         {
                             jumping = false;
@@ -237,7 +237,7 @@ namespace IAFRATE_Thomas_WFA
                 {
                     if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
-                        
+
                         if (Me.Bottom < x.Bottom)
                         {
                             isOnGround = true;
@@ -245,7 +245,7 @@ namespace IAFRATE_Thomas_WFA
                             Me.Top = x.Top - Me.Height;
                             jumpspeed = 0;
                         }
-                        
+
                         else if (jumping && Me.Top < x.Bottom)
                         {
                             jumping = false;
@@ -338,7 +338,7 @@ namespace IAFRATE_Thomas_WFA
             }
         }
 
-        
+
         //gère le relachement des touches pour les animations et les mouvements
         private void KeyIsUp(object sender, KeyEventArgs e)
         {

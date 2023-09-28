@@ -109,7 +109,7 @@
             // 
             Me.BackColor = Color.Transparent;
             Me.Image = Properties.Resources.character;
-            Me.Location = new Point(45, 308);
+            Me.Location = new Point(45, 312);
             Me.Margin = new Padding(0);
             Me.Name = "Me";
             Me.Size = new Size(46, 58);
@@ -120,10 +120,10 @@
             // Door
             // 
             Door.BackColor = Color.Transparent;
-            Door.Image = Properties.Resources._9530132de98ea26;
-            Door.Location = new Point(-6, 10);
+            Door.Image = Properties.Resources.porte;
+            Door.Location = new Point(12, 4);
             Door.Name = "Door";
-            Door.Size = new Size(90, 85);
+            Door.Size = new Size(55, 85);
             Door.SizeMode = PictureBoxSizeMode.StretchImage;
             Door.TabIndex = 14;
             Door.TabStop = false;
@@ -182,11 +182,11 @@
             // pictureBox10
             // 
             pictureBox10.BackColor = Color.Transparent;
-            pictureBox10.BackgroundImage = Properties.Resources.Brown_Off;
+            pictureBox10.BackgroundImage = Properties.Resources.platformreal2;
             pictureBox10.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox10.Location = new Point(319, 373);
+            pictureBox10.Location = new Point(303, 383);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(81, 32);
+            pictureBox10.Size = new Size(81, 30);
             pictureBox10.TabIndex = 23;
             pictureBox10.TabStop = false;
             pictureBox10.Tag = "platform";
@@ -206,7 +206,7 @@
             // pictureBox15
             // 
             pictureBox15.BackColor = Color.Transparent;
-            pictureBox15.BackgroundImage = Properties.Resources.Grey_Off;
+            pictureBox15.BackgroundImage = Properties.Resources.platformreal;
             pictureBox15.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox15.Location = new Point(268, 234);
             pictureBox15.Name = "pictureBox15";
@@ -218,11 +218,11 @@
             // pictureBox25
             // 
             pictureBox25.BackColor = Color.Transparent;
-            pictureBox25.BackgroundImage = Properties.Resources.Idle;
+            pictureBox25.BackgroundImage = Properties.Resources.platmove;
             pictureBox25.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox25.Location = new Point(178, 373);
+            pictureBox25.Location = new Point(178, 398);
             pictureBox25.Name = "pictureBox25";
-            pictureBox25.Size = new Size(74, 58);
+            pictureBox25.Size = new Size(74, 35);
             pictureBox25.TabIndex = 38;
             pictureBox25.TabStop = false;
             pictureBox25.Tag = "platmove";
@@ -236,11 +236,11 @@
             // pictureBox9
             // 
             pictureBox9.BackColor = Color.Transparent;
-            pictureBox9.BackgroundImage = Properties.Resources.Brown_Off;
+            pictureBox9.BackgroundImage = Properties.Resources.platformreal2;
             pictureBox9.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox9.Location = new Point(457, 373);
+            pictureBox9.Location = new Point(457, 383);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(81, 32);
+            pictureBox9.Size = new Size(81, 30);
             pictureBox9.TabIndex = 39;
             pictureBox9.TabStop = false;
             pictureBox9.Tag = "platform";
@@ -248,7 +248,7 @@
             // pictureBox11
             // 
             pictureBox11.BackColor = Color.Transparent;
-            pictureBox11.BackgroundImage = Properties.Resources.Grey_Off;
+            pictureBox11.BackgroundImage = Properties.Resources.platformreal;
             pictureBox11.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox11.Location = new Point(445, 234);
             pictureBox11.Name = "pictureBox11";
@@ -260,7 +260,7 @@
             // pictureBox12
             // 
             pictureBox12.BackColor = Color.Transparent;
-            pictureBox12.BackgroundImage = Properties.Resources.Grey_Off;
+            pictureBox12.BackgroundImage = Properties.Resources.platformreal;
             pictureBox12.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox12.Location = new Point(544, 234);
             pictureBox12.Name = "pictureBox12";
@@ -272,7 +272,7 @@
             // pictureBox14
             // 
             pictureBox14.BackColor = Color.Transparent;
-            pictureBox14.BackgroundImage = Properties.Resources.Grey_Off;
+            pictureBox14.BackgroundImage = Properties.Resources.platformreal;
             pictureBox14.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox14.Location = new Point(607, 196);
             pictureBox14.Name = "pictureBox14";
@@ -284,7 +284,7 @@
             // pictureBox16
             // 
             pictureBox16.BackColor = Color.Transparent;
-            pictureBox16.BackgroundImage = Properties.Resources.Grey_Off;
+            pictureBox16.BackgroundImage = Properties.Resources.platformreal;
             pictureBox16.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox16.Location = new Point(644, 158);
             pictureBox16.Name = "pictureBox16";
@@ -296,7 +296,7 @@
             // pictureBox17
             // 
             pictureBox17.BackColor = Color.Transparent;
-            pictureBox17.BackgroundImage = Properties.Resources.Grey_Off;
+            pictureBox17.BackgroundImage = Properties.Resources.platformreal;
             pictureBox17.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox17.Location = new Point(513, 85);
             pictureBox17.Name = "pictureBox17";
@@ -308,7 +308,7 @@
             // pictureBox18
             // 
             pictureBox18.BackColor = Color.Transparent;
-            pictureBox18.BackgroundImage = Properties.Resources.Grey_Off;
+            pictureBox18.BackgroundImage = Properties.Resources.platformreal;
             pictureBox18.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox18.Location = new Point(389, 85);
             pictureBox18.Name = "pictureBox18";
@@ -320,7 +320,7 @@
             // pictureBox19
             // 
             pictureBox19.BackColor = Color.Transparent;
-            pictureBox19.BackgroundImage = Properties.Resources.Grey_Off;
+            pictureBox19.BackgroundImage = Properties.Resources.platformreal;
             pictureBox19.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox19.Location = new Point(268, 85);
             pictureBox19.Name = "pictureBox19";
@@ -332,7 +332,7 @@
             // pictureBox20
             // 
             pictureBox20.BackColor = Color.Transparent;
-            pictureBox20.BackgroundImage = Properties.Resources.Grey_Off;
+            pictureBox20.BackgroundImage = Properties.Resources.platformreal;
             pictureBox20.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox20.Location = new Point(149, 85);
             pictureBox20.Name = "pictureBox20";
@@ -344,7 +344,7 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.BackgroundImage = Properties.Resources.Grey_Off;
+            pictureBox3.BackgroundImage = Properties.Resources.platformreal;
             pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox3.Location = new Point(44, 84);
             pictureBox3.Name = "pictureBox3";
@@ -356,7 +356,7 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.BackgroundImage = Properties.Resources.Grey_Off;
+            pictureBox2.BackgroundImage = Properties.Resources.platformreal;
             pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox2.Location = new Point(-37, 84);
             pictureBox2.Name = "pictureBox2";

@@ -77,20 +77,20 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.BackgroundImage = Properties.Resources.plateform2;
-            pictureBox2.Location = new Point(149, 460);
+            pictureBox2.BackgroundImage = Properties.Resources.platformreal;
+            pictureBox2.Location = new Point(113, 464);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(97, 31);
+            pictureBox2.Size = new Size(96, 32);
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             pictureBox2.Tag = "platform";
             // 
             // pictureBox3
             // 
-            pictureBox3.BackgroundImage = Properties.Resources.plateform2;
-            pictureBox3.Location = new Point(263, 422);
+            pictureBox3.BackgroundImage = Properties.Resources.platformreal;
+            pictureBox3.Location = new Point(221, 425);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(337, 35);
+            pictureBox3.Size = new Size(384, 32);
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
             pictureBox3.Tag = "platform";
@@ -98,31 +98,31 @@
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.BackgroundImage = Properties.Resources.Idle;
+            pictureBox4.BackgroundImage = Properties.Resources.platmove;
             pictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox4.Location = new Point(633, 155);
+            pictureBox4.Location = new Point(633, 177);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(74, 60);
+            pictureBox4.Size = new Size(74, 35);
             pictureBox4.TabIndex = 3;
             pictureBox4.TabStop = false;
             pictureBox4.Tag = "platmove";
             // 
             // pictureBox5
             // 
-            pictureBox5.BackgroundImage = Properties.Resources.plateform2;
-            pictureBox5.Location = new Point(263, 198);
+            pictureBox5.BackgroundImage = Properties.Resources.platformreal;
+            pictureBox5.Location = new Point(224, 198);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(338, 34);
+            pictureBox5.Size = new Size(384, 32);
             pictureBox5.TabIndex = 4;
             pictureBox5.TabStop = false;
             pictureBox5.Tag = "platform";
             // 
             // pictureBox6
             // 
-            pictureBox6.BackgroundImage = Properties.Resources.plateform2;
+            pictureBox6.BackgroundImage = Properties.Resources.platformreal;
             pictureBox6.Location = new Point(0, 155);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(193, 37);
+            pictureBox6.Size = new Size(192, 32);
             pictureBox6.TabIndex = 5;
             pictureBox6.TabStop = false;
             pictureBox6.Tag = "platform";
@@ -130,10 +130,10 @@
             // Door
             // 
             Door.BackColor = Color.Transparent;
-            Door.Image = Properties.Resources._9530132de98ea26;
+            Door.Image = Properties.Resources.porte;
             Door.Location = new Point(50, 71);
             Door.Name = "Door";
-            Door.Size = new Size(90, 85);
+            Door.Size = new Size(55, 85);
             Door.SizeMode = PictureBoxSizeMode.StretchImage;
             Door.TabIndex = 9;
             Door.TabStop = false;
@@ -156,7 +156,7 @@
             pictureBox7.BackColor = Color.Transparent;
             pictureBox7.BackgroundImage = Properties.Resources.Spiked_Ball;
             pictureBox7.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox7.Location = new Point(514, 397);
+            pictureBox7.Location = new Point(501, 397);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(25, 24);
             pictureBox7.TabIndex = 13;

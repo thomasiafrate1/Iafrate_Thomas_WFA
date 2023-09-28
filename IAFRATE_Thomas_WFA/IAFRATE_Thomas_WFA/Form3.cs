@@ -49,7 +49,7 @@ namespace IAFRATE_Thomas_WFA
 
         }
 
-       
+
 
 
         //méthode principale qui gère les mouvements, collisions etc...
