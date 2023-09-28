@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\IAFRATE_Thomas_WFA",
+    "\\IAFRATE_Thomas_WFA\\IAFRATE_Thomas_WFA"
   ],
-  "SelectedNode": "\\IAFRATE_Thomas_WFA.sln",
+  "SelectedNode": "\\IAFRATE_Thomas_WFA\\IAFRATE_Thomas_WFA\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
