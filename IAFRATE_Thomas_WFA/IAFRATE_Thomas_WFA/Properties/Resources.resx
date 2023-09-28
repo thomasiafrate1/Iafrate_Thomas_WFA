@@ -124,11 +124,17 @@
   <data name="Melon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Melon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="characte" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\characte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Grey Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Grey Off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Melon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Melon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cherries4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cherries41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,11 +142,11 @@
   <data name="characterToLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\characterToLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tile_0301" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\tile_0301.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="characterToLeft1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\characterToLeft1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Brown Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Brown Off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tile_0111" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\tile_0111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,11 +154,8 @@
   <data name="ground2guez" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ground2guez.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ground23" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ground23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Terrain (16x16)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Terrain (16x16).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="9ilmm0002m3111" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\9ilmm0002m311.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,11 +187,14 @@
   <data name="Cherries3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cherries31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ground21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ground21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spades" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spades.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Pineapple1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pineapple1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="characterToRight2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\characterToRight2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plateform" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plateform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,20 +208,17 @@
   <data name="Cherries2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cherries21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="9ilmm0002m311" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\9ilmm0002m311.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Melon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Melon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ground31" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ground31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="characterToRight2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\characterToRight2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ground21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ground21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tile_0301" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\tile_0301.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cherries1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cherries1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,8 +226,8 @@
   <data name="itsasecret" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\itsasecret.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Melon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Melon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Terrain (16x16)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Terrain (16x16).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pineapple4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pineapple4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,8 +247,8 @@
   <data name="plateform2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plateform2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Brown Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Brown Off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ground23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ground23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="9ilmm0002m3112" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\9ilmm0002m311.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,19 +259,19 @@
   <data name="Terrain (16x16)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Terrain (16x16).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="9ilmm0002m311" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\9ilmm0002m311.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pineapple2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pineapple2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ground31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ground31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ground3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ground3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="spades" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spades.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

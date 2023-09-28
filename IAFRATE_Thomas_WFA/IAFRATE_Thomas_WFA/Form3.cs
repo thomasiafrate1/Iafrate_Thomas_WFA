@@ -279,7 +279,7 @@ namespace IAFRATE_Thomas_WFA
         private void keyisdown(object sender, KeyEventArgs e)
         {
 
-            //mouvement quand c'est appuyer
+            //mouvement quand c'est appuyer  
             if (e.KeyCode == Keys.Left)
             {
                 goLeft = true;
