@@ -64,7 +64,7 @@ namespace IAFRATE_Thomas_WFA
                 {
                     if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
-                        GameTimer.Stop(); 
+                        GameTimer.Stop();
                         Form2 form2 = new Form2();
                         this.Hide();
                         form2.Show();
@@ -81,8 +81,8 @@ namespace IAFRATE_Thomas_WFA
                     if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
                         GameData.Score++;
-                        label1.Text = "Score : " + GameData.Score.ToString(); 
-                        x.Left = -100; 
+                        label1.Text = "Score : " + GameData.Score.ToString();
+                        x.Left = -100;
                     }
 
                     else
@@ -121,7 +121,7 @@ namespace IAFRATE_Thomas_WFA
                 {
                     if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
-                        
+
                         if (Me.Bottom < x.Bottom)
                         {
                             isOnGround = true;
@@ -129,7 +129,7 @@ namespace IAFRATE_Thomas_WFA
                             Me.Top = x.Top - Me.Height;
                             jumpspeed = 0;
                         }
-                        
+
                         else if (jumping && Me.Top < x.Bottom)
                         {
                             jumping = false;
@@ -243,7 +243,7 @@ namespace IAFRATE_Thomas_WFA
             {
                 goRight = false;
             }
-            
+
 
             // animation quand on bouge plus
             if (e.KeyCode == Keys.Left)
@@ -275,8 +275,6 @@ namespace IAFRATE_Thomas_WFA
 
         }
 
-
-
-
+        
     }
 }

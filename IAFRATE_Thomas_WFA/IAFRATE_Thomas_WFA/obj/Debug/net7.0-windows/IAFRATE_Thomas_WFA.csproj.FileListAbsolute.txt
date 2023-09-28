@@ -35,4 +35,4 @@ D:\Users\thoma\OneDrive\Bureau\hangmanweb\Iafrate_Thomas_WFA\IAFRATE_Thomas_WFA\
 D:\Users\thoma\OneDrive\Bureau\hangmanweb\Iafrate_Thomas_WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\IAFRATE_Thomas_WFA.Form2.resources
 D:\Users\thoma\OneDrive\Bureau\hangmanweb\Iafrate_Thomas_WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\IAFRATE_Thomas_WFA.Form3.resources
 D:\Users\thoma\OneDrive\Bureau\hangmanweb\Iafrate_Thomas_WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\IAFRATE_Thomas_WFA.Accueil.resources
-D:\Users\thoma\OneDrive\Bureau\hangmanweb\Iafrate_Thomas_WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\IAFRATE_Thomas_WFA.Form4.resources
+D:\Users\thoma\OneDrive\Bureau\hangmanweb\Iafrate_Thomas_WFA\IAFRATE_Thomas_WFA\IAFRATE_Thomas_WFA\obj\Debug\net7.0-windows\IAFRATE_Thomas_WFA.Fin.resources

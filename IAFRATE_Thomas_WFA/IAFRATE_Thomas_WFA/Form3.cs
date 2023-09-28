@@ -23,10 +23,10 @@ namespace IAFRATE_Thomas_WFA
         int playerSpeed = 15;
         int initialJumpForce = -2;
 
-        int movingSpeed = 5; 
-        int moveDistance = 0; 
-        bool movingUp = true; 
-
+        int movingSpeed = 5;
+        int moveDistance = 0;
+        bool movingUp = true;
+        bool haskey = false;
 
 
 
@@ -61,7 +61,7 @@ namespace IAFRATE_Thomas_WFA
         {
 
             //affichage du score
-            label1.Text = "Score : " + GameData.Score.ToString(); 
+            label1.Text = "Score : " + GameData.Score.ToString();
 
 
             // gérer la collision des fruit + character
@@ -71,9 +71,9 @@ namespace IAFRATE_Thomas_WFA
                 {
                     if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
-                        GameData.Score++; 
-                        label1.Text = "Score : " + GameData.Score.ToString(); 
-                        x.Left = -100; 
+                        GameData.Score++;
+                        label1.Text = "Score : " + GameData.Score.ToString();
+                        x.Left = -100;
                     }
 
                     else
@@ -95,9 +95,9 @@ namespace IAFRATE_Thomas_WFA
                 {
                     if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
-                       
+
                         Me.Location = new Point(45, 308);
-                        
+
                         break;
                     }
                 }
@@ -114,6 +114,7 @@ namespace IAFRATE_Thomas_WFA
                     if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
                         x.Visible = false;
+                        haskey = true;
 
                         foreach (Control y in this.Controls)
                         {
@@ -126,7 +127,20 @@ namespace IAFRATE_Thomas_WFA
                     }
                 }
             }
-
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && (string)x.Tag == "door")
+                {
+                    if (Me.Bounds.IntersectsWith(x.Bounds) && haskey)
+                    {
+                        // Passer à Fin.cs
+                        GameTimer.Stop();
+                        Fin newForm = new Fin();
+                        newForm.Show();
+                        this.Hide(); //ou this.Close(); si vous voulez fermer cette forme
+                    }
+                }
+            }
 
             //gére les mouvements de la plateforme bougeante
             foreach (Control x in this.Controls)
@@ -139,12 +153,12 @@ namespace IAFRATE_Thomas_WFA
                         moveDistance += movingSpeed;
                         if (moveDistance >= 190)
                         {
-                            movingUp = false; 
+                            movingUp = false;
                         }
                     }
                     else
                     {
-                        x.Top += movingSpeed; 
+                        x.Top += movingSpeed;
                         moveDistance -= movingSpeed;
                         if (moveDistance <= 0)
                         {
@@ -194,7 +208,7 @@ namespace IAFRATE_Thomas_WFA
                 {
                     if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
-                        
+
                         if (Me.Bottom < x.Bottom)
                         {
                             isOnGround = true;
@@ -202,7 +216,7 @@ namespace IAFRATE_Thomas_WFA
                             Me.Top = x.Top - Me.Height;
                             jumpspeed = 0;
                         }
-                        
+
                         else if (jumping && Me.Top < x.Bottom)
                         {
                             jumping = false;
@@ -218,7 +232,7 @@ namespace IAFRATE_Thomas_WFA
                 {
                     if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
-                        
+
                         if (Me.Bottom < x.Bottom)
                         {
                             isOnGround = true;
@@ -226,7 +240,7 @@ namespace IAFRATE_Thomas_WFA
                             Me.Top = x.Top - Me.Height;
                             jumpspeed = 0;
                         }
-                        
+
                         else if (jumping && Me.Top < x.Bottom)
                         {
                             jumping = false;

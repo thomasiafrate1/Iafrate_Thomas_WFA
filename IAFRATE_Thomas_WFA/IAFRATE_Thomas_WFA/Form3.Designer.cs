@@ -476,6 +476,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Blue;
             ClientSize = new Size(737, 543);
+            Controls.Add(pictureBox13);
             Controls.Add(label1);
             Controls.Add(pictureBox29);
             Controls.Add(pictureBox25);
@@ -489,8 +490,6 @@
             Controls.Add(pictureBox11);
             Controls.Add(pictureBox9);
             Controls.Add(pictureBox15);
-            Controls.Add(pictureBox13);
-            Controls.Add(Door);
             Controls.Add(pictureBox10);
             Controls.Add(pictureBox8);
             Controls.Add(pictureBox7);
@@ -499,8 +498,6 @@
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox1);
             Controls.Add(Me);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
             Controls.Add(pictureBox27);
             Controls.Add(pictureBox21);
             Controls.Add(pictureBox22);
@@ -508,6 +505,9 @@
             Controls.Add(pictureBox24);
             Controls.Add(pictureBox23);
             Controls.Add(pictureBox28);
+            Controls.Add(Door);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox3);
             Name = "Form3";
             Text = "Form3";
             KeyDown += keyisdown;

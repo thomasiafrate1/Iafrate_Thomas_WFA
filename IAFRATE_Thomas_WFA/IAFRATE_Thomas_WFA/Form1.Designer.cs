@@ -339,6 +339,7 @@
             DoubleBuffered = true;
             Name = "Form1";
             FormClosed += formclosed;
+            
             KeyDown += gamekeyisdown;
             KeyUp += gamekeyisup;
             ((System.ComponentModel.ISupportInitialize)Plateform2).EndInit();
