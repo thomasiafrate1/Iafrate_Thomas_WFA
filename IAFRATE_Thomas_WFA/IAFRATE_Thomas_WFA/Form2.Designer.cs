@@ -47,6 +47,7 @@
             pictureBox13 = new PictureBox();
             GameTimer = new System.Windows.Forms.Timer(components);
             label1 = new Label();
+            labelLives = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -264,12 +265,22 @@
             label1.TabIndex = 59;
             label1.Text = "Score :";
             // 
+            // labelLives
+            // 
+            labelLives.AutoSize = true;
+            labelLives.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            labelLives.Location = new Point(649, -1);
+            labelLives.Name = "labelLives";
+            labelLives.Size = new Size(0, 32);
+            labelLives.TabIndex = 60;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Green;
             ClientSize = new Size(737, 543);
+            Controls.Add(labelLives);
             Controls.Add(label1);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox6);
@@ -332,5 +343,6 @@
         private PictureBox pictureBox13;
         private System.Windows.Forms.Timer GameTimer;
         private Label label1;
+        private Label labelLives;
     }
 }

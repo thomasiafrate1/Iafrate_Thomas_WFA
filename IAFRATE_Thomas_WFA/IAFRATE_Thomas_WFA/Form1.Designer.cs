@@ -50,6 +50,7 @@
             pictureBox10 = new PictureBox();
             pictureBox11 = new PictureBox();
             label1 = new Label();
+            labelLives = new Label();
             ((System.ComponentModel.ISupportInitialize)Plateform2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Plateform3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Plateform4).BeginInit();
@@ -307,15 +308,26 @@
             label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(-1, 0);
             label1.Name = "label1";
-            label1.Size = new Size(87, 32);
+            label1.Size = new Size(107, 32);
             label1.TabIndex = 59;
-            label1.Text = "Score :";
+            label1.Text = "Score : 0";
+            // 
+            // labelLives
+            // 
+            labelLives.AutoSize = true;
+            labelLives.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            labelLives.Location = new Point(649, 0);
+            labelLives.Name = "labelLives";
+            labelLives.Size = new Size(91, 32);
+            labelLives.TabIndex = 61;
+            labelLives.Text = "Vies : 3";
             // 
             // Form1
             // 
             BackColor = Color.White;
             BackgroundImage = Properties.Resources.Brown;
             ClientSize = new Size(737, 543);
+            Controls.Add(labelLives);
             Controls.Add(label1);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
@@ -338,7 +350,7 @@
             Controls.Add(pictureBox7);
             DoubleBuffered = true;
             Name = "Form1";
-            FormClosed += formclosed;
+            
             KeyDown += gamekeyisdown;
             KeyUp += gamekeyisup;
             ((System.ComponentModel.ISupportInitialize)Plateform2).EndInit();
@@ -385,5 +397,6 @@
         private PictureBox pictureBox10;
         private PictureBox pictureBox11;
         private Label label1;
+        private Label labelLives;
     }
 }

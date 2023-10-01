@@ -62,6 +62,7 @@
             pictureBox28 = new PictureBox();
             pictureBox29 = new PictureBox();
             label1 = new Label();
+            labelLives = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Me).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Door).BeginInit();
@@ -470,12 +471,23 @@
             label1.TabIndex = 58;
             label1.Text = "Score :";
             // 
+            // labelLives
+            // 
+            labelLives.AutoSize = true;
+            labelLives.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            labelLives.Location = new Point(650, -3);
+            labelLives.Name = "labelLives";
+            labelLives.Size = new Size(71, 32);
+            labelLives.TabIndex = 61;
+            labelLives.Text = "Vies :";
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Blue;
             ClientSize = new Size(737, 543);
+            Controls.Add(labelLives);
             Controls.Add(pictureBox13);
             Controls.Add(label1);
             Controls.Add(pictureBox29);
@@ -582,5 +594,6 @@
         private PictureBox pictureBox28;
         private PictureBox pictureBox29;
         private Label label1;
+        private Label labelLives;
     }
 }

@@ -51,6 +51,8 @@ namespace IAFRATE_Thomas_WFA
         public Form2()
         {
             InitializeComponent();
+
+            labelLives.Text = "Vies : " + GameData.Vies.ToString();
             // position de départ des plateformes qui bougent
             foreach (Control x in this.Controls)
             {
@@ -115,20 +117,30 @@ namespace IAFRATE_Thomas_WFA
             {
                 if (x is PictureBox)
                 {
-
                     if ((string)x.Tag == "enemie1" && Me.Bounds.IntersectsWith(x.Bounds))
                     {
+                        GameData.Vies--;
 
-                        Me.Left = playerStartPositionX;
-                        Me.Top = playerStartPositionY;
+                        if (GameData.Vies <= 0)
+                        {
+                            GameTimer.Stop();
+                            GameOver gameover = new GameOver();
+                            this.Hide();
+                            gameover.Show();
+                        }
+                        else
+                        {
+                            Me.Left = playerStartPositionX;
+                            Me.Top = playerStartPositionY;
+                            labelLives.Text = "Vies : " + GameData.Vies.ToString();
+                        }
                     }
-
-
                 }
             }
 
 
-            //mouvement de l'ennemy
+
+            //mouvement de l'enemie
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox)

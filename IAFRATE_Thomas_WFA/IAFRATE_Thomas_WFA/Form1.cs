@@ -34,7 +34,7 @@ namespace IAFRATE_Thomas_WFA
 
         }
 
-        // sert à stocker le score (A FINIR)
+      
 
 
 
@@ -70,7 +70,7 @@ namespace IAFRATE_Thomas_WFA
             }
 
 
-            // boucle pour la collision entre le joueur et les fruit + mettre à jour le score (A FINIR)
+            // boucle pour la collision entre le joueur et les fruit + mettre à jour le score 
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "fruit")
@@ -181,11 +181,7 @@ namespace IAFRATE_Thomas_WFA
         }
 
 
-        //penser a supprimer ca sert a rien
-        private void AnimateCharacter()
-        {
-
-        }
+      
 
 
         // gérer lorsque les touches sont enfoncées
@@ -256,21 +252,7 @@ namespace IAFRATE_Thomas_WFA
             }
         }
 
-        // enleeever ca sert a rien
-        private void formclosed(object sender, FormClosedEventArgs e)
-        {
-
-        }
-        // enleeever ca sert a rien
-        private void RestartGame()
-        {
-
-        }
-        // enleeever ca sert a rien
-        private void MoveGameElements(string direction)
-        {
-
-        }
+      
 
 
     }

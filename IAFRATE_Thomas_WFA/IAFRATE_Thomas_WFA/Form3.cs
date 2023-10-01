@@ -57,7 +57,7 @@ namespace IAFRATE_Thomas_WFA
         {
 
             //affichage du score
-            label1.Text = "Score : " + GameData.Score.ToString();
+            labelLives.Text = "Vies : " + GameData.Vies.ToString();
 
 
             // gérer la collision des fruit + character
@@ -91,8 +91,20 @@ namespace IAFRATE_Thomas_WFA
                 {
                     if (Me.Bounds.IntersectsWith(x.Bounds))
                     {
+                        GameData.Vies--;
 
-                        Me.Location = new Point(45, 308);
+                        if (GameData.Vies <= 0)
+                        {
+                            GameTimer.Stop();
+                            GameOver gameover = new GameOver();
+                            this.Hide();
+                            gameover.Show();
+                        }
+                        else
+                        {
+                            Me.Location = new Point(45, 308);
+                            labelLives.Text = "Vies : " + GameData.Vies.ToString();
+                        }
 
                         break;
                     }
@@ -102,7 +114,8 @@ namespace IAFRATE_Thomas_WFA
 
 
 
-            // gérer le lien entre le cadenas et la clé (A FINIR)
+
+            // gérer le lien entre le cadenas et la clé 
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "key")
@@ -129,11 +142,10 @@ namespace IAFRATE_Thomas_WFA
                 {
                     if (Me.Bounds.IntersectsWith(x.Bounds) && haskey)
                     {
-                        // Passer à Fin.cs
                         GameTimer.Stop();
                         Fin newForm = new Fin();
                         newForm.Show();
-                        this.Hide(); //ou this.Close(); si vous voulez fermer cette forme
+                        this.Hide();
                     }
                 }
             }

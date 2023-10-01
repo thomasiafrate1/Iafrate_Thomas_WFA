@@ -9,6 +9,7 @@ namespace IAFRATE_Thomas_WFA
     public static class GameData
     {
         public static int Score = 0;
+        public static int Vies = 3;
     }
 
 }
